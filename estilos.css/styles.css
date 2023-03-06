@@ -10,6 +10,7 @@ div {
   color: #000000;
   text-align: center;
   font-size: 35px;
+  width: 100%;
 }
 .menucubos {
   width: 85%;
@@ -47,12 +48,20 @@ p:hover::before {
 nav {
   margin: none;
   background: #000000;
+  width: 100%;
 }
 nav .menuItems {
   list-style: none;
   display: flex;
- 
+  width: 100%;
+  flex-direction: column;
 }
+
+@media screen and (min-width: 768px) {
+  nav .menuItems {
+    flex-direction: row;
+  } 
+  }
 nav .menuItems li {
   margin: 0;
   width: 100%;
@@ -61,11 +70,10 @@ nav .menuItems li {
 
 @media screen and (min-width: 768px) {
   nav .menuItems li {
-    flex-flow: row;
     margin: 100px;
   } 
   }
-  
+ 
 nav .menuItems li a {
   text-decoration: none;
   color: #ffffff;
