@@ -11,14 +11,25 @@ div {
   text-align: center;
   font-size: 35px;
 }
-.menucubos{
+.menucubos {
   width: 85%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 15px;
   padding: 40px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+.menucubos {
+  grid-template-columns: 1fr 1fr;
+} 
+}
+
+@media screen and (min-width: 1280px) {    
+
+  .menucubos {
+    grid-template-columns: 1fr 1fr 1fr;    }
 }
 p {
   margin: 30px;
@@ -40,10 +51,21 @@ nav {
 nav .menuItems {
   list-style: none;
   display: flex;
+ 
 }
 nav .menuItems li {
-  margin: 100px;
+  margin: 0;
+  width: 100%;
+  flex-flow: column;
 }
+
+@media screen and (min-width: 768px) {
+  nav .menuItems li {
+    flex-flow: row;
+    margin: 100px;
+  } 
+  }
+  
 nav .menuItems li a {
   text-decoration: none;
   color: #ffffff;
@@ -85,7 +107,6 @@ nav .menuItems li a:hover::before {
   .carrito  {
     margin: 100px;
     font-size:  35px;
-    
   }
     footer a {
     text-decoration: none;
@@ -96,21 +117,24 @@ nav .menuItems li a:hover::before {
     border-bottom: 1px transparent;
   }
    .container {
-    width: 100%;
-    margin: 5px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      margin: 5px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
   }
+
   .info {
     font-size: 30px;
   }
+
   .gan {
     margin: 5px;
     font-size: 25px;
     text-align: center;
   }
+
   .cubo {
     display: block;
     margin: auto;
