@@ -2,79 +2,49 @@
   padding: 0;
   margin: 0;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
+body,html {
+  width: 100%;
   font-family: Hack, monospace;
-  padding-bottom: 3em;
 }
-
 div {
   color: #000000;
   text-align: center;
   font-size: 35px;
-  
-  
-  
-}
-.divxd {
- 
- 
 }
 .menucubos{
-  display: flex;
-
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 15px;
+  padding: 40px;
+  overflow: hidden;
 }
-
-  
-  
-
 p {
   margin: 30px;
-  font-size: 90px;
+  font-size: 20px;
   color: #000000;
   text-transform: uppercase;
   font-weight: 600;
   transition: all 1s ease-in-out;
   position: relative;
+  text-align: center;
  }
-p::before {
-  content: attr(data-item);
-  transition: all 1s ease-in-out;
-  color: #20e006;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
 p:hover::before {
   width: 50%;
 }
-
 nav {
   margin: none;
   background: #000000;
-  
-  
 }
 nav .menuItems {
   list-style: none;
   display: flex;
-  
 }
 nav .menuItems li {
   margin: 100px;
 }
 nav .menuItems li a {
-  
   text-decoration: none;
   color: #ffffff;
   font-size: 25px;
@@ -82,7 +52,6 @@ nav .menuItems li a {
   transition: all 0.5s;
   position: relative;
   text-transform: uppercase;
-  
 }
 nav .menuItems li a::before {
   content: attr(data-item);
@@ -101,7 +70,7 @@ nav .menuItems li a:hover::before {
   transition: all 0.5s ease-in-out;
 }
     footer {
-    position: absolute;
+    position: end;
     font-size: 10px;
     bottom: 0;
     width: 100%;
@@ -126,13 +95,9 @@ nav .menuItems li a:hover::before {
     footer a:hover {
     border-bottom: 1px transparent;
   }
-  .moyu {
-    font-size: 30px;
-    display: flex;
-    padding: 25px;
-  }
-   .q {
-    margin: 30px;
+   .container {
+    width: 100%;
+    margin: 5px;
     border-radius: 6px;
     overflow: hidden;
     background: white;
@@ -140,19 +105,22 @@ nav .menuItems li a:hover::before {
   }
   .info {
     font-size: 30px;
-    
   }
   .gan {
     margin: 5px;
     font-size: 25px;
+    text-align: center;
   }
-  @media (max-width:600px) {
-    .q { 
-      width: 50%;
-   }
-   .body {
-      width: 50%; 
-   }
+  .cubo {
+    display: block;
+    margin: auto;
   }
+  .rivers-body {
+    margin: 50px;
+  }
+  .RUBIKS {
+    font-size: 50px;
+  }
+
     
       
