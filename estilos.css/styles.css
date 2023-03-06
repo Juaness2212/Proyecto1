@@ -5,6 +5,8 @@
 body,html {
   width: 100%;
   font-family: Hack, monospace;
+  margin: 0;
+  overflow-x: hidden;
 }
 div {
   color: #000000;
@@ -142,10 +144,18 @@ nav .menuItems li a:hover::before {
     font-size: 25px;
     text-align: center;
   }
+  .hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
   .cubo {
     display: block;
-    margin: auto;
+    margin: 0;
+    width: 320px;
+    
   }
   .rivers-body {
     margin: 50px;
